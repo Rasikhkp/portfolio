@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import GetInTouch from "./pages/GetInTouch";
+import Nav from "./pages/Nav";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
 				<Route path="/about" element={<About />} />
 				<Route path="/portfolio" element={<Portfolio />} />
 				<Route path="/getintouch" element={<GetInTouch />} />
+				<Route path="/nav" element={<Nav />} />
 			</Routes>
 		</Router>
 	);
