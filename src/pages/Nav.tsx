@@ -1,8 +1,4 @@
 import x from "../../public/icon/x.svg";
-import home from "../../public/icon/home.svg";
-import contact from "../../public/icon/contact.svg";
-import person from "../../public/icon/person.svg";
-import portfolio from "../../public/icon/portfolio.svg";
 
 const Nav = () => {
 	return (
@@ -17,7 +13,6 @@ const Nav = () => {
 							viewBox="0 0 24 24"
 							xmlns="http://www.w3.org/2000/svg"
 							id="home"
-							class="icon glyph"
 							stroke="#FFB400"
 						>
 							<g id="SVGRepo_bgCarrier" stroke-width="0"></g>

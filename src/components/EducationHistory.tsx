@@ -4,7 +4,7 @@ const EducationHistory = ({
 	children,
 	duration,
 	className,
-    lineH = 'h-14'
+    lineH
 }: {
 	className: string;
 	children: any;
