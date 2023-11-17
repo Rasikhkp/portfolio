@@ -6,8 +6,8 @@ const Nav = () => {
 			<img className="absolute top-10 right-10" src={x} alt="" />
 
 			<div className="px-8 pt-20">
-				<div className="flex gap-6 border-b text-[#FFB400] border-[#292929] py-4">
-					<div className="w-5">
+				<div className="flex gap-6 border-b text-[#FFB400]  min-[577px]:py-6 border-[#292929] py-4">
+					<div className="min-[577px]:w-8 w-5 transition-all">
 						<svg
 							fill="#FFB400"
 							viewBox="0 0 24 24"
@@ -26,11 +26,11 @@ const Nav = () => {
 							</g>
 						</svg>
 					</div>
-					<div>HOME</div>
+					<div className="min-[577px]:text-2xl transition-all">HOME</div>
 				</div>
 
-				<div className="flex gap-6 border-b border-[#292929] py-4">
-					<div className="w-5">
+				<div className="flex gap-6 border-b border-[#292929] min-[577px]:py-6  py-4">
+					<div className="min-[577px]:w-8 w-5 transition-all">
 						<svg
 							viewBox="0 0 24 24"
 							fill="none"
@@ -62,11 +62,11 @@ const Nav = () => {
 							</g>
 						</svg>
 					</div>
-					<div>ABOUT</div>
+					<div className="min-[577px]:text-2xl transition-all">ABOUT</div>
 				</div>
 
-				<div className="flex gap-6 border-b border-[#292929] py-4">
-					<div className="w-5">
+				<div className="flex gap-6 border-b border-[#292929] min-[577px]:py-6  py-4">
+					<div className="min-[577px]:w-8 w-5 transition-all">
 						<svg
 							fill="#ffffff"
 							version="1.1"
@@ -91,11 +91,11 @@ const Nav = () => {
 							</g>
 						</svg>
 					</div>
-					<div>PORTFOLIO</div>
+					<div className="min-[577px]:text-2xl transition-all">PORTFOLIO</div>
 				</div>
 
-				<div className="flex gap-6 border-b border-[#292929] py-4">
-					<div className="w-5">
+				<div className="flex gap-6 border-b border-[#292929] min-[577px]:py-6  py-4">
+					<div className="min-[577px]:w-8 w-5 transition-all">
 						<svg
 							fill="#ffffff"
 							viewBox="0 0 24 24"
@@ -113,7 +113,7 @@ const Nav = () => {
 							</g>
 						</svg>
 					</div>
-					<div>CONTACT</div>
+					<div className="min-[577px]:text-2xl transition-all">CONTACT</div>
 				</div>
 			</div>
 		</div>
