@@ -9,7 +9,7 @@ import CTABtn from "../components/CTABtn";
 const GetInTouch = () => {
 	return (
 		<div className="bg-[#111] font-poppins text-white h-fit pb-32">
-			<div className="w-full px-4 flex justify-between items-center h-16 bg-[#252525]">
+			<div className="w-full px-8 flex justify-between items-center h-16 bg-[#252525]">
 				<div className="text-3xl font-bold text-white">
 					GET IN <span className="text-[#FFB400]">TOUCH</span>
 				</div>

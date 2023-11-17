@@ -18,7 +18,7 @@ const About = () => {
 	const skills = [html, js, css, tw, php, njs, react, ts, mongo, laravel, ex];
 	return (
 		<div className="bg-[#111] h-fit font-poppins">
-			<div className="w-full px-4 flex justify-between items-center h-16 bg-[#252525]">
+			<div className="w-full px-8 flex justify-between items-center h-16 bg-[#252525]">
 				<div className="text-3xl font-bold text-white">
 					ABOUT <span className="text-[#FFB400]">ME</span>
 				</div>

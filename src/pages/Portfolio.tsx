@@ -4,7 +4,7 @@ import porto1 from "../../public/img/1710.jpg";
 const Portfolio = () => {
 	return (
 		<div className="bg-[#111] font-poppins">
-			<div className="w-full px-4 flex justify-between items-center h-16 bg-[#252525]">
+			<div className="w-full px-8 flex justify-between items-center h-16 bg-[#252525]">
 				<div className="text-3xl font-bold text-white">
 					MY <span className="text-[#FFB400]">PORTFOLIO</span>
 				</div>
