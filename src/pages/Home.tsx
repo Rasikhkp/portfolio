@@ -54,11 +54,11 @@ function Home() {
 					<div className="text-white mt-[14vh]">
 						<div className="flex gap-7 text-[#FFB400] w-[50vw]">
 							<div className="text-[6vh] font-bold relative ml-[8vh]">
-								<span className="tracking-[-3px] font-bold -left-[8vh] absolute">—</span>
+								<span className="tracking-[-3px] font-bold -left-[8vh] absolute">
+									—
+								</span>
 								I'M RASIKH KHALIL PASHA.
-								<div className=" text-white">
-									FULLSTACK DEVELOPER
-								</div>
+								<div className=" text-white">FULLSTACK DEVELOPER</div>
 							</div>
 						</div>
 
@@ -68,7 +68,7 @@ function Home() {
 							journey!
 						</div>
 
-						<CTABtn className="mt-10 scale-[calc(2vh)]">
+						<CTABtn className="mt-10 lg:mt-[10vh]">
 							MORE ABOUT ME
 						</CTABtn>
 					</div>
@@ -87,7 +87,6 @@ function Home() {
 					<div className="w-[7vh] flex items-center justify-center h-[7vh] rounded-full bg-[#2B2A2A] mt-[3vh]">
 						<img className="w-[3vh]" src={contact} alt="" />
 					</div>
-
 				</div>
 			</div>
 		</>
