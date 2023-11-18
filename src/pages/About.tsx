@@ -22,7 +22,7 @@ const About = () => {
 	const skills = [html, js, css, tw, php, njs, react, ts, mongo, laravel, ex];
 	return (
 		<div className="bg-[#111] mx-auto h-fit font-poppins min-[577px]:pt-20">
-			<div className="fixed top-1/2 -translate-y-1/2 right-5">
+			<div className="fixed top-1/2 -translate-y-1/2 right-[5vh]">
 				<div className="w-[7vh] flex items-center justify-center h-[7vh] rounded-full bg-[#2B2A2A]">
 					<img className="w-[3vh]" src={home} alt="" />
 				</div>
