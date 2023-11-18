@@ -36,7 +36,7 @@ const About = () => {
 				</div>
 			</div>
 
-			<div className="text-center mt-8 ml-8 full text-lg min-[577px]:text-2xl min-[577px]:text-start font-bold text-white">
+			<div className="text-center mt-8 min-[577px]:ml-8 full text-lg min-[577px]:text-2xl min-[577px]:text-start font-bold text-white">
 				PERSONAL INFO
 			</div>
 
