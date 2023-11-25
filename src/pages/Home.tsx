@@ -1,11 +1,15 @@
 import menu from "../../public/icon/menu.svg";
+import home from "../../public/icon/home.svg";
+import person from "../../public/icon/person.svg";
+import portfolio from "../../public/icon/portfolio.svg";
+import contact from "../../public/icon/contact.svg";
 import CTABtn from "../components/CTABtn";
 import fotoku from "../../public/img/fotoku.png";
 
 function Home() {
 	return (
 		<>
-			<div className="bg-[#111111] pt-32 h-screen w-full px-8">
+			<div className="bg-[#111111] lg:hidden pt-32 h-screen w-full px-8">
 				<div className="absolute w-[53px] h-[53px] rounded-[6px] bg-[#252525] right-8 top-8 flex items-center justify-center">
 					<img className="w-7" src={menu} alt="" />
 				</div>
@@ -38,7 +42,7 @@ function Home() {
 			<div className="hidden lg:block h-screen overflow-hidden relative bg-[#111111]">
 				<div className="bg-[#F9B000] w-[345px] h-[200vh] absolute -translate-x-40 -rotate-12"></div>
 
-				<div className="flex gap-10 z-10 absolute left-[7.5vh] top-1/2 -translate-y-1/2">
+				<div className="flex gap-10 items-center z-10 absolute left-[7.5vh] top-1/2 -translate-y-1/2">
 					<div className="w-[60vh] h-[85vh] overflow-hidden  rounded-xl">
 						<img
 							src={fotoku}
@@ -47,41 +51,39 @@ function Home() {
 						/>
 					</div>
 
-					<div className="text-white mt-[14vh]">
-						<div className="flex gap-7 text-[#FFB400] w-[50vw]">
-							<div className="text-[6vh] font-bold relative ml-[8vh]">
-								<span className="tracking-[-3px] font-bold -left-[8vh] absolute">
-									—
-								</span>
+					<div className="text-white 2xl:ml-[10vh]">
+						<div className="flex gap-7 text-4xl xl:text-5xl font-bold text-[#FFB400] w-[50vw]">
+							<div>—</div>
+							<div>
 								I'M RASIKH KHALIL PASHA.
 								<div className=" text-white">FULLSTACK DEVELOPER</div>
 							</div>
 						</div>
 
-						<div className="font-osans mt-10 text-[2.5vh] tracking-[1px] w-[40vw]">
+						<div className="font-osans mt-10 tracking-[1px] w-[400px] xl:w-[600px]">
 							Aspiring fullstack developer with a passion for innovation.
 							Explore my portfolio for a glimpse into my developing
 							journey!
 						</div>
 
-						<CTABtn className="mt-10 lg:mt-[10vh]">
+						<CTABtn className="mt-10">
 							MORE ABOUT ME
 						</CTABtn>
 					</div>
 				</div>
 
-				<div className="absolute top-1/2 -translate-y-1/2 right-[5vh]">
-					<div className="w-[7vh] flex items-center justify-center h-[7vh] rounded-full bg-[#2B2A2A]">
-						<img className="w-[3vh]" src={home} alt="" />
+				<div className="absolute top-1/2 -translate-y-1/2 right-10">
+					<div className="w-[50px] flex items-center justify-center h-[50px] rounded-full bg-[#2B2A2A]">
+						<img className="w-[20px]" src={home} alt="" />
 					</div>
-					<div className="w-[7vh] flex items-center justify-center h-[7vh] rounded-full bg-[#2B2A2A] mt-[3vh]">
-						<img className="w-[3vh]" src={person} alt="" />
+					<div className="w-[50px] flex items-center justify-center h-[50px] rounded-full bg-[#2B2A2A] mt-[20px]">
+						<img className="w-[20px]" src={person} alt="" />
 					</div>
-					<div className="w-[7vh] flex items-center justify-center h-[7vh] rounded-full bg-[#2B2A2A] mt-[3vh]">
-						<img className="w-[3vh]" src={portfolio} alt="" />
+					<div className="w-[50px] flex items-center justify-center h-[50px] rounded-full bg-[#2B2A2A] mt-[20px]">
+						<img className="w-[20px]" src={portfolio} alt="" />
 					</div>
-					<div className="w-[7vh] flex items-center justify-center h-[7vh] rounded-full bg-[#2B2A2A] mt-[3vh]">
-						<img className="w-[3vh]" src={contact} alt="" />
+					<div className="w-[50px] flex items-center justify-center h-[50px] rounded-full bg-[#2B2A2A] mt-[20px]">
+						<img className="w-[20px]" src={contact} alt="" />
 					</div>
 				</div>
 			</div>
