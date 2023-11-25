@@ -1,20 +1,16 @@
 import menu from "../../public/icon/menu.svg";
-import home from "../../public/icon/home.svg";
-import person from "../../public/icon/person.svg";
-import portfolio from "../../public/icon/portfolio.svg";
-import contact from "../../public/icon/contact.svg";
 import CTABtn from "../components/CTABtn";
 import fotoku from "../../public/img/fotoku.png";
 
 function Home() {
 	return (
 		<>
-			<div className="bg-[#111111] pt-32 h-screen w-full px-8 lg:hidden">
+			<div className="bg-[#111111] pt-32 h-screen w-full px-8">
 				<div className="absolute w-[53px] h-[53px] rounded-[6px] bg-[#252525] right-8 top-8 flex items-center justify-center">
 					<img className="w-7" src={menu} alt="" />
 				</div>
 
-				<div className="w-[244px] hidden min-[577px]:block overflow-hidden h-[244px] rounded-full border-4 border-[#252525] mx-auto">
+				<div className="w-[244px] hidden min-[577px]:block overflow-hidden h-[244px] rounded-ful border-4 border-[#252525] rounded-full mx-auto">
 					<img
 						className="scale-[2] translate-x-4 -translate-y-32"
 						src={fotoku}
