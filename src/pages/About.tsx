@@ -12,6 +12,7 @@ import php from "../../public/icon/php.svg";
 import react from "../../public/icon/react.svg";
 import ts from "../../public/icon/ts.svg";
 import tw from "../../public/icon/tw.svg";
+import download from "../../public/icon/download.svg";
 import EducationHistory from "../components/EducationHistory";
 import NavIcon from "../components/NavIcon";
 
@@ -123,7 +124,7 @@ const About = () => {
 					</div>
 				</div>
 
-				<CTABtn className="mt-14 lg:mx-auto">DOWNLOAD CV</CTABtn>
+				<CTABtn className="mt-14 lg:mx-auto" icon={download}>DOWNLOAD CV</CTABtn>
 
 				<hr className="mt-20 mb-9 border-[#292929] mx-auto w-[154px]" />
 
