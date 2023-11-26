@@ -1,10 +1,7 @@
 import menu from "../../public/icon/menu.svg";
-import home from "../../public/icon/home.svg";
-import person from "../../public/icon/person.svg";
-import portfolio from "../../public/icon/portfolio.svg";
-import contact from "../../public/icon/contact.svg";
 import CTABtn from "../components/CTABtn";
 import fotoku from "../../public/img/fotoku.png";
+import NavIcon from "../components/NavIcon";
 
 function Home() {
 	return (
@@ -40,10 +37,12 @@ function Home() {
 			</div>
 
 			<div className="hidden lg:block h-screen overflow-hidden relative bg-[#111111]">
+				<NavIcon />
+
 				<div className="bg-[#F9B000] w-[345px] h-[200vh] absolute -translate-x-40 -rotate-12"></div>
 
 				<div className="flex gap-10 items-center z-10 absolute left-[7.5vh] top-1/2 -translate-y-1/2">
-					<div className="w-[60vh] h-[85vh] overflow-hidden  rounded-xl">
+					<div className="w-[60vh] h-[85vh] overflow-hidden rounded-xl 2xl:rounded-3xl">
 						<img
 							src={fotoku}
 							alt=""
@@ -66,24 +65,7 @@ function Home() {
 							journey!
 						</div>
 
-						<CTABtn className="mt-10">
-							MORE ABOUT ME
-						</CTABtn>
-					</div>
-				</div>
-
-				<div className="absolute top-1/2 -translate-y-1/2 right-10">
-					<div className="w-[50px] flex items-center justify-center h-[50px] rounded-full bg-[#2B2A2A]">
-						<img className="w-[20px]" src={home} alt="" />
-					</div>
-					<div className="w-[50px] flex items-center justify-center h-[50px] rounded-full bg-[#2B2A2A] mt-[20px]">
-						<img className="w-[20px]" src={person} alt="" />
-					</div>
-					<div className="w-[50px] flex items-center justify-center h-[50px] rounded-full bg-[#2B2A2A] mt-[20px]">
-						<img className="w-[20px]" src={portfolio} alt="" />
-					</div>
-					<div className="w-[50px] flex items-center justify-center h-[50px] rounded-full bg-[#2B2A2A] mt-[20px]">
-						<img className="w-[20px]" src={contact} alt="" />
+						<CTABtn className="mt-10">MORE ABOUT ME</CTABtn>
 					</div>
 				</div>
 			</div>
