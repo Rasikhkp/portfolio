@@ -3,19 +3,24 @@ import { useRef, useContext, createContext, ReactNode } from "react";
 
 const TransitionContext = createContext<(() => void) | null>(null);
 
-export default function TransitionContextProvider({ children }: { children: ReactNode }) {
+export default function TransitionContextProvider({
+	children,
+}: {
+	children: ReactNode;
+}) {
 	const transitionRef = useRef(null);
-	
+
 	function transition() {
-		gsap.timeline()
-			.set(transitionRef.current, { zIndex: 100 })
+		gsap
+			.timeline()
+			.set(transitionRef.current, { display: "block", zIndex: 100 })
 			.to(".kotak", {
 				y: "200%",
 				duration: 1.2,
 				stagger: 0.2,
 				ease: "Power2.easeInOut",
 			})
-			.set(transitionRef.current, { zIndex: -10 })
+			.set(transitionRef.current, { display: "none" })
 			.set(".kotak", { y: "0%" });
 	}
 	return (
@@ -23,7 +28,7 @@ export default function TransitionContextProvider({ children }: { children: Reac
 			{children}
 			<div
 				ref={transitionRef}
-				className="w-full fixed top-0 left-0 h-screen -z-10]"
+				className="w-full fixed top-0 left-0 h-screen hidden"
 			>
 				<div className="kotak bg-[#2B2A2A] w-full h-screen absolute top-[-100%]"></div>
 				<div className="kotak bg-[#FFB400] w-full h-screen absolute top-[-100%]"></div>

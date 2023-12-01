@@ -1,6 +1,7 @@
 import menu from "../../public/icon/menu.svg";
-import porto1 from "../../public/img/1710.jpg";
 import FloatingNavCircle from "../components/FloatingNavCircle";
+import PortfolioImage from "../components/PortfolioImage";
+import porto1 from "../../public/img/1710.jpg";
 
 const Portfolio = () => {
 	return (
@@ -30,47 +31,18 @@ const Portfolio = () => {
 
 			{/* Image grid */}
 			<div className="lg:px-32 px-8 py-8 min-[577px]:grid min-[577px]:grid-cols-2 lg:grid-cols-3 gap-8 max-w-screen-xl mx-auto">
-				<img className="rounded-lg" src={porto1} alt="" />
-				<img
-					className="rounded-lg mt-8 min-[577px]:mt-0"
-					src={porto1}
-					alt=""
-				/>
-				<img
-					className="rounded-lg mt-8 min-[577px]:mt-0"
-					src={porto1}
-					alt=""
-				/>
-				<img
-					className="rounded-lg mt-8 min-[577px]:mt-0"
-					src={porto1}
-					alt=""
-				/>
-				<img
-					className="rounded-lg mt-8 min-[577px]:mt-0"
-					src={porto1}
-					alt=""
-				/>
-				<img
-					className="rounded-lg mt-8 min-[577px]:mt-0"
-					src={porto1}
-					alt=""
-				/>
-				<img
-					className="rounded-lg mt-8 min-[577px]:mt-0"
-					src={porto1}
-					alt=""
-				/>
-				<img
-					className="rounded-lg mt-8 min-[577px]:mt-0"
-					src={porto1}
-					alt=""
-				/>
-				<img
-					className="rounded-lg mt-8 min-[577px]:mt-0"
-					src={porto1}
-					alt=""
-				/>
+				<PortfolioImage src={porto1} />
+				<PortfolioImage src={porto1} className=" mt-8 min-[577px]:mt-0" />
+				<PortfolioImage src={porto1} className=" mt-8 min-[577px]:mt-0" />
+				<PortfolioImage src={porto1} className=" mt-8 min-[577px]:mt-0" />
+				<PortfolioImage src={porto1} className=" mt-8 min-[577px]:mt-0" />
+				<PortfolioImage src={porto1} className=" mt-8 min-[577px]:mt-0" />
+				<PortfolioImage src={porto1} className=" mt-8 min-[577px]:mt-0" />
+				<PortfolioImage src={porto1} className=" mt-8 min-[577px]:mt-0" />
+				<PortfolioImage src={porto1} className=" mt-8 min-[577px]:mt-0" />
+				<PortfolioImage src={porto1} className=" mt-8 min-[577px]:mt-0" />
+				<PortfolioImage src={porto1} className=" mt-8 min-[577px]:mt-0" />
+				<PortfolioImage src={porto1} className=" mt-8 min-[577px]:mt-0" />
 			</div>
 		</div>
 	);
