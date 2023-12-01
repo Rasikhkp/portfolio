@@ -1,11 +1,11 @@
 import menu from "../../public/icon/menu.svg";
 import porto1 from "../../public/img/1710.jpg";
-import NavIcon from "../components/NavIcon";
+import FloatingNavCircle from "../components/FloatingNavCircle";
 
 const Portfolio = () => {
 	return (
 		<div className="bg-[#111] font-poppins min-[577px]:pt-20 min-h-screen">
-			<NavIcon />
+			<FloatingNavCircle />
 
 			{/* Top navigation bar */}
 			<div className="w-full min-[577px]:hidden px-8 flex justify-between items-center h-16 bg-[#252525]">
@@ -22,11 +22,11 @@ const Portfolio = () => {
 
 			{/* Large title */}
 			<div className="hidden min-[577px]:block text-[120px] relative font-extrabold text-[#222222] text-center">
-					WORKS
-					<div className="text-[56px] lg:text-[56px] absolute w-fit top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 font-bold text-white">
-						MY <span className="text-[#FFB400] ">PORTFOLIO</span>
-					</div>
+				WORKS
+				<div className="text-[56px] lg:text-[56px] absolute w-fit top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 font-bold text-white">
+					MY <span className="text-[#FFB400] ">PORTFOLIO</span>
 				</div>
+			</div>
 
 			{/* Image grid */}
 			<div className="lg:px-32 px-8 py-8 min-[577px]:grid min-[577px]:grid-cols-2 lg:grid-cols-3 gap-8 max-w-screen-xl mx-auto">

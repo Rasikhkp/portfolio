@@ -6,7 +6,7 @@ import wa from "../../public/icon/wa.svg";
 import telegram from "../../public/icon/telegram.svg";
 import lin from "../../public/icon/lin.svg";
 import CTABtn from "../components/CTABtn";
-import NavIcon from "../components/NavIcon";
+import FloatingNavCircle from "../components/FloatingNavCircle";
 
 const GetInTouch = () => {
 	return (
@@ -23,7 +23,7 @@ const GetInTouch = () => {
 				<img className="w-7" src={menu} alt="" />
 			</div>
 
-			<NavIcon />
+			<FloatingNavCircle />
 
 			{/* Large title */}
 			<div className="hidden min-[577px]:block text-[120px] relative font-extrabold text-[#222222] text-center">
@@ -65,13 +65,22 @@ const GetInTouch = () => {
 					</div>
 
 					<div className="mt-8 flex gap-6 px-8">
-						<a href="#" className="bg-[#2B2A2A] hover:bg-[#FFB400] transition-all rounded-full p-4">
+						<a
+							href="#"
+							className="bg-[#2B2A2A] hover:bg-[#FFB400] transition-all rounded-full p-4"
+						>
 							<img src={ig} alt="" />
 						</a>
-						<a href="#" className="bg-[#2B2A2A] hover:bg-[#FFB400] transition-all rounded-full p-4">
+						<a
+							href="#"
+							className="bg-[#2B2A2A] hover:bg-[#FFB400] transition-all rounded-full p-4"
+						>
 							<img src={lin} alt="" />
 						</a>
-						<a href="#" className="bg-[#2B2A2A] hover:bg-[#FFB400] transition-all rounded-full p-4">
+						<a
+							href="#"
+							className="bg-[#2B2A2A] hover:bg-[#FFB400] transition-all rounded-full p-4"
+						>
 							<img src={wa} alt="" />
 						</a>
 					</div>
@@ -103,7 +112,9 @@ const GetInTouch = () => {
 						rows={10}
 					></textarea>
 
-					<CTABtn className="mt-[75px] lg:mt-7 lg:ml-0" icon={telegram}>SEND MESSAGES</CTABtn>
+					<CTABtn className="mt-[75px] lg:mt-7 lg:ml-0" icon={telegram}>
+						SEND MESSAGES
+					</CTABtn>
 				</div>
 			</div>
 		</div>

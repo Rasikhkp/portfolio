@@ -1,6 +1,6 @@
 import arrowRigth from '../../public/icon/arrowRight.svg'
 
-const CTABtn = ({ className, children, icon = arrowRigth }: { className: string; children: any, icon: any }) => {
+const CTABtn = ({ className, children, icon = arrowRigth }: { className: string; children: any, icon?: any }) => {
   return (
     <button className={`${className} flex group relative w-[240px] items-center justify-between h-[55px] rounded-full overflow-hidden border-[1px] border-[#FFB400] `}>
         <div className='ml-8 font-semibold text-white z-10'>{children}</div>
