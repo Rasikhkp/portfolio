@@ -11,7 +11,7 @@ import MobileNav from "../components/MobileNav";
 import { useState } from "react";
 import axios from "axios";
 // import { Notyf } from "Notyf";
-import { Notyf } from "Notyf";
+import { Notyf } from "notyf";
 import "notyf/notyf.min.css";
 // import { React } from 'react'
 
