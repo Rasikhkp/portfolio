@@ -1,9 +1,10 @@
+import { ButtonHTMLAttributes } from 'react'
 import arrowRigth from '../../public/icon/arrowRight.svg'
 
 type CTABtnProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   className: string
   children: any
-  isLoading: boolean
+  isLoading?: boolean
   icon?: any
 }
 const CTABtn = ({ className, isLoading, children, icon = arrowRigth, ...buttonProps }: CTABtnProps) => {

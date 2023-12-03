@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import ImagePreview from "./ImagePreview";
 import chevRight from "../../public/icon/chevRight.svg";
 import chevLeft from "../../public/icon/chevLeft.svg";
-import x from "../../public/icon/x.svg";
 import { PortfolioProps } from "../pages/Portfolio";
 
 export default function Carousel({

@@ -1,4 +1,3 @@
-import menu from "../../public/icon/menu.svg";
 import fotoku from "../../public/img/fotoku.png";
 import CTABtn from "../components/CTABtn";
 import html from "../../public/icon/html.svg";
