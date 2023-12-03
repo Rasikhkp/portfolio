@@ -1,4 +1,4 @@
-import menu from "../../public/icon/menu.svg";
+// import menu from "../../public/icon/menu.svg";
 import mail from "../../public/icon/mail.svg";
 import phone from "../../public/icon/phone.svg";
 import ig from "../../public/icon/ig.svg";
@@ -7,21 +7,72 @@ import telegram from "../../public/icon/telegram.svg";
 import lin from "../../public/icon/lin.svg";
 import CTABtn from "../components/CTABtn";
 import FloatingNavCircle from "../components/FloatingNavCircle";
+import MobileNav from "../components/MobileNav";
+import { useState } from "react";
+import axios from "axios";
+// import { Notyf } from "Notyf";
+import {Notyf} from 'Notyf'
+import 'notyf/notyf.min.css';
+// import { React } from 'react'
+
+const notyf = new Notyf({
+	duration: 1000,
+	position: {
+		x: "right",
+		y: "top",
+	},
+});
 
 const GetInTouch = () => {
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [subject, setSubject] = useState("");
+	const [message, setMessage] = useState("");
+	const [isLoading, setIsLoading] = useState(false);
+
+	const data = {
+		service_id: "service_qt8hptj",
+		template_id: "template_jvv8l7v",
+		user_id: "yul4YhQSNBSUoU8TX",
+		template_params: {
+			to_name: "Rasikh Khalil Pasha",
+			from_name: name,
+			from_subject: subject,
+			from_message: message,
+			from_email: email,
+		},
+	};
+
+	const handleSubmit = async (e: any) => {
+		e.preventDefault();
+
+		try {
+			setIsLoading(true);
+			const res = await axios.post(
+				"https://api.emailjs.com/api/v1.0/email/send",
+				data
+			);
+			setIsLoading(false);
+			console.log(res.data);
+			setName("");
+			setEmail("");
+			setSubject("");
+			setMessage("");
+			notyf.success("Your message has been sent!");
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
 	return (
 		<div className="bg-[#111] font-poppins text-white min-h-screen pb-10 min-[577px]:pt-20">
 			<div className="w-full min-[577px]:hidden px-8 flex justify-between items-center h-16 bg-[#252525]">
 				<div className="text-3xl font-bold text-white">
 					GET IN <span className="text-[#FFB400]">TOUCH</span>
 				</div>
-				<img className=" w-7" src={menu} alt="" />
 			</div>
 
-			{/* Floating menu button */}
-			<div className="absolute hidden lg:hidden min-[577px]:flex transition-all w-[53px] h-[53px] rounded-[6px] bg-[#252525] right-8 top-8 items-center justify-center">
-				<img className="w-7" src={menu} alt="" />
-			</div>
+			<MobileNav />
 
 			<FloatingNavCircle />
 
@@ -85,25 +136,36 @@ const GetInTouch = () => {
 						</a>
 					</div>
 				</div>
-				<div className="mt-8 px-8 lg:px-0 font-osans">
+				<form
+					onSubmit={handleSubmit}
+					className="mt-8 px-8 lg:px-0 font-osans"
+				>
 					<div className="lg:flex gap-4">
 						<input
+							value={name}
+							onChange={(e) => setName(e.target.value)}
 							className="bg-[#252525] rounded-full py-4 px-8 w-full text-sm"
 							type="text"
 							placeholder="YOUR NAME"
 						/>
 						<input
+							value={email}
+							onChange={(e) => setEmail(e.target.value)}
 							className="bg-[#252525] rounded-full py-4 px-8 w-full text-sm mt-7 lg:mt-0"
 							type="text"
 							placeholder="YOUR EMAIL"
 						/>
 						<input
+							value={subject}
+							onChange={(e) => setSubject(e.target.value)}
 							className="bg-[#252525] rounded-full py-4 px-8 w-full text-sm mt-7 lg:mt-0"
 							type="text"
 							placeholder="YOUR SUBJECT"
 						/>
 					</div>
 					<textarea
+						value={message}
+						onChange={(e) => setMessage(e.target.value)}
 						className="bg-[#252525] rounded-[21px] py-4 px-8 w-full text-sm mt-7"
 						placeholder="YOUR MESSAGE"
 						name=""
@@ -112,10 +174,15 @@ const GetInTouch = () => {
 						rows={10}
 					></textarea>
 
-					<CTABtn className="mt-[75px] lg:mt-7 lg:ml-0" icon={telegram}>
+					<CTABtn
+						type="submit"
+						className="mt-[75px] lg:mt-7 lg:ml-0"
+						isLoading={isLoading}
+						icon={telegram}
+					>
 						SEND MESSAGES
 					</CTABtn>
-				</div>
+				</form>
 			</div>
 		</div>
 	);

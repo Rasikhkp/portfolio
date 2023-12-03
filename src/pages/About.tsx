@@ -15,6 +15,7 @@ import tw from "../../public/icon/tw.svg";
 import download from "../../public/icon/download.svg";
 import EducationHistory from "../components/EducationHistory";
 import FloatingNavCircle from "../components/FloatingNavCircle";
+import MobileNav from "../components/MobileNav";
 
 const About = () => {
 	const skills = [html, js, css, tw, php, njs, react, ts, mongo, laravel, ex];
@@ -27,12 +28,9 @@ const About = () => {
 					<div className="text-3xl font-bold text-white">
 						ABOUT <span className="text-[#FFB400]">ME</span>
 					</div>
-					<img className=" w-7" src={menu} alt="" />
 				</div>
 
-				<div className="absolute lg:hidden hidden min-[577px]:flex transition-all w-[53px] h-[53px] rounded-[6px] bg-[#252525] right-8 top-8 items-center justify-center">
-					<img className="w-7" src={menu} alt="" />
-				</div>
+				<MobileNav />
 
 				<div className="max-w-screen-xl mx-auto px-8">
 					<div className="hidden min-[577px]:block text-[120px] relative font-extrabold text-[#222222] text-center">
@@ -42,9 +40,9 @@ const About = () => {
 						</div>
 					</div>
 
-					<hr className="mt-10 mb-9 border-[#292929] mx-auto w-[154px]" />
+					<hr className="lg:block hidden mt-10 mb-9 border-[#292929] mx-auto w-[154px]" />
 
-					<div className="text-[20px] min-[577px]:text-2xl lg:text-2xl font-bold w-fit lg:mx-auto text-white">
+					<div className="text-[20px] mt-9 min-[577px]:text-2xl lg:text-2xl font-bold w-fit lg:mx-auto text-white">
 						PERSONAL INFO
 					</div>
 

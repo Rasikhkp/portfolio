@@ -1,9 +1,7 @@
-import x from "../../public/icon/x.svg";
-
 const Nav = () => {
+	
 	return (
-		<div className="bg-[#252525] h-screen text-white">
-			<img className="absolute top-10 right-10" src={x} alt="" />
+		<div className="bg-[#252525] nav absolute top-0 -left-[100%] w-full z-20 h-screen text-white">
 
 			<div className="px-8 pt-20">
 				<div className="flex gap-6 border-b text-[#FFB400] border-[#292929] py-4">

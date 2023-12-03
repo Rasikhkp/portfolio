@@ -3,7 +3,6 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import GetInTouch from "./pages/GetInTouch";
-import Nav from "./pages/Nav";
 import PortoPreview from "./pages/PortoPreview";
 import Tes from "./pages/Tes";
 import TransitionContextProvider from "./context/TransitionContextProvider";
@@ -17,7 +16,6 @@ function App() {
 					<Route path="/about" element={<About />} />
 					<Route path="/portfolio" element={<Portfolio />} />
 					<Route path="/getintouch" element={<GetInTouch />} />
-					<Route path="/nav" element={<Nav />} />
 					<Route path="/portopreview" element={<PortoPreview />} />
 					<Route path="/tes" element={<Tes />} />
 				</Routes>
