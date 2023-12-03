@@ -1,19 +1,20 @@
 import gsap from "gsap";
-import { useRef } from "react";
+import { ButtonHTMLAttributes, useRef } from "react";
 
 type PositionObj = {
 	value: number;
 	name: string;
 };
 
-type PortfolioImageProps = {
+type PortfolioImageProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 	className?: string;
-	src: string;
+	image: string;
 };
 
 export default function PortfolioImage({
 	className,
-	src,
+	image,
+	...buttonProps
 }: PortfolioImageProps) {
 	const transitionRef = useRef(null);
 
@@ -24,7 +25,6 @@ export default function PortfolioImage({
 	};
 
 	const transition = (event: React.MouseEvent<HTMLButtonElement>) => {
-		console.log("event", event);
 		const { clientX, clientY, currentTarget, type } = event;
 		const { top, left, right, bottom } =
 			currentTarget.getBoundingClientRect();
@@ -75,6 +75,7 @@ export default function PortfolioImage({
 			className={`${className} relative overflow-hidden rounded-lg`}
 			onMouseEnter={(event) => transition(event)}
 			onMouseLeave={(event) => transition(event)}
+			{...buttonProps}
 		>
 			<div
 				ref={transitionRef}
@@ -82,7 +83,7 @@ export default function PortfolioImage({
 			>
 				Image Project
 			</div>
-			<img src={src} alt="" />
+			<img src={image} alt="" />
 		</button>
 	);
 }

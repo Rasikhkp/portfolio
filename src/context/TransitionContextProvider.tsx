@@ -43,7 +43,7 @@ export function useTransitionContext() {
 
 	if (!context) {
 		throw new Error(
-			"useTransitionCont must be used inside TransitionContextProvider"
+			"useTransitionContext must be used inside TransitionContextProvider"
 		);
 	}
 

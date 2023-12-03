@@ -1,9 +1,58 @@
 import menu from "../../public/icon/menu.svg";
+import x from "../../public/icon/x.svg";
 import FloatingNavCircle from "../components/FloatingNavCircle";
 import PortfolioImage from "../components/PortfolioImage";
 import porto1 from "../../public/img/1710.jpg";
+import Carousel from "../components/Carousel";
+import { useState } from "react";
+
+export type PortfolioProps = {
+	slug: string;
+	project: string;
+	techstack: string;
+	client: string;
+	preview: string;
+	image: string;
+};
+
+const portfolios = [
+	{
+		slug: "web-envato",
+		project: "Website",
+		techstack: "HTML, CSS, Javascript",
+		client: "Envato",
+		preview: "www.envato.com",
+		image: porto1,
+	},
+	{
+		slug: "mobile-google",
+		project: "Mobile App",
+		techstack: "React Native, TypeScript",
+		client: "Google",
+		preview: "www.google.com",
+		image: porto1,
+	},
+	{
+		slug: "web-amazon",
+		project: "E-commerce Website",
+		techstack: "React, Redux, Node.js",
+		client: "Amazon",
+		preview: "www.amazon.com",
+		image: porto1,
+	},
+	{
+		slug: "app-facebook",
+		project: "Social Media App",
+		techstack: "React, Firebase",
+		client: "Facebook",
+		preview: "www.facebook.com",
+		image: porto1,
+	},
+];
 
 const Portfolio = () => {
+	const [openCarousel, setOpenCarousel] = useState(false);
+	const [portfolioIndex, setPortfolioIndex] = useState(0);
 	return (
 		<div className="bg-[#111] font-poppins min-[577px]:pt-20 min-h-screen">
 			<FloatingNavCircle />
@@ -31,19 +80,33 @@ const Portfolio = () => {
 
 			{/* Image grid */}
 			<div className="lg:px-32 px-8 py-8 min-[577px]:grid min-[577px]:grid-cols-2 lg:grid-cols-3 gap-8 max-w-screen-xl mx-auto">
-				<PortfolioImage src={porto1} />
-				<PortfolioImage src={porto1} className=" mt-8 min-[577px]:mt-0" />
-				<PortfolioImage src={porto1} className=" mt-8 min-[577px]:mt-0" />
-				<PortfolioImage src={porto1} className=" mt-8 min-[577px]:mt-0" />
-				<PortfolioImage src={porto1} className=" mt-8 min-[577px]:mt-0" />
-				<PortfolioImage src={porto1} className=" mt-8 min-[577px]:mt-0" />
-				<PortfolioImage src={porto1} className=" mt-8 min-[577px]:mt-0" />
-				<PortfolioImage src={porto1} className=" mt-8 min-[577px]:mt-0" />
-				<PortfolioImage src={porto1} className=" mt-8 min-[577px]:mt-0" />
-				<PortfolioImage src={porto1} className=" mt-8 min-[577px]:mt-0" />
-				<PortfolioImage src={porto1} className=" mt-8 min-[577px]:mt-0" />
-				<PortfolioImage src={porto1} className=" mt-8 min-[577px]:mt-0" />
+				{portfolios.map((portfolio, index) => (
+					<PortfolioImage
+						onClick={() => {
+							setOpenCarousel(true);
+							setPortfolioIndex(index);
+						}}
+						key={index}
+						image={portfolio.image}
+						className={`${index > 0 ? "mt-8" : ""} min-[577px]:mt-0`}
+					/>
+				))}
 			</div>
+
+			{openCarousel ? (
+				<>
+					<Carousel
+						initialIndex={portfolioIndex}
+						portfolios={portfolios}
+					/>
+					<button
+						onClick={() => setOpenCarousel(false)}
+						className="fixed top-5 right-5 z-30 hover:opacity-60 transition-all active:opacity-40"
+					>
+						<img src={x} className="w-7" alt="" />
+					</button>
+				</>
+			) : null}
 		</div>
 	);
 };
