@@ -11,13 +11,14 @@ import php from "../../public/icon/php.svg";
 import react from "../../public/icon/react.svg";
 import ts from "../../public/icon/ts.svg";
 import tw from "../../public/icon/tw.svg";
+import next from "../../public/icon/next.svg";
 import download from "../../public/icon/download.svg";
 import EducationHistory from "../components/EducationHistory";
 import FloatingNavCircle from "../components/FloatingNavCircle";
 import MobileNav from "../components/MobileNav";
 
 const About = () => {
-	const skills = [html, js, css, tw, php, njs, react, ts, mongo, laravel, ex];
+	const skills = [html, js, css, tw, php, njs, react, ts, mongo, laravel, ex, next];
 	return (
 		<>
 			<div className="bg-[#111] w-full h-fit font-poppins min-[577px]:pt-20">
@@ -122,7 +123,7 @@ const About = () => {
 						</div>
 					</div>
 
-					<CTABtn className="mt-14 lg:mx-auto" icon={download}>
+					<CTABtn onClick={() => window.open('/public/CV RASIKH.pdf', '_blank', 'fullscreen=yes')} className="mt-14 lg:mx-auto" icon={download}>
 						DOWNLOAD CV
 					</CTABtn>
 

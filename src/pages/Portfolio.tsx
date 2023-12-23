@@ -2,6 +2,7 @@ import x from "../../public/icon/x.svg";
 import FloatingNavCircle from "../components/FloatingNavCircle";
 import PortfolioImage from "../components/PortfolioImage";
 import porto1 from "../../public/img/1710.jpg";
+import todolistss from "../../public/img/todlist sss.png"
 import Carousel from "../components/Carousel";
 import { useState } from "react";
 import MobileNav from "../components/MobileNav";
@@ -17,12 +18,12 @@ export type PortfolioProps = {
 
 const portfolios = [
 	{
-		slug: "web-envato",
+		slug: "simple-todolist",
 		project: "Website",
-		techstack: "HTML, CSS, Javascript",
-		client: "Envato",
-		preview: "www.envato.com",
-		image: porto1,
+		techstack: "Nextjs, TypeScript, MongoDB, Tailwind, Redux Toolkit, Prisma",
+		client: "Me",
+		preview: "https://itsjusttodolist.vercel.app",
+		image: todolistss,
 	},
 	{
 		slug: "mobile-google",

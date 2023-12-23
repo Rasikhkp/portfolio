@@ -17,7 +17,7 @@ Welcome to the repository of my personal portfolio website. This project showcas
 
 ## Preview
 
-![Screenshot of My Portfolio Website](screenshot_portfolio_website.png)
+![Screenshot of My Portfolio Website](/public/img/portoflio%20ss.png)
 
 ## Live Demo
 

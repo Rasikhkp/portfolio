@@ -1,9 +1,20 @@
 import CTABtn from "../components/CTABtn";
 import fotoku from "../../public/img/fotoku.png";
-import FloatingNavCircle from "../components/FloatingNavCircle";
+import FloatingNavCircle, { wait } from "../components/FloatingNavCircle";
 import MobileNav from "../components/MobileNav";
+import { useNavigate } from "react-router-dom";
+import { useTransitionContext } from "../context/TransitionContextProvider";
 
 const Home = () => {
+	const navigate = useNavigate();
+	const transition = useTransitionContext();
+
+	const navigateTo = async (path: string) => {
+		transition();
+		await wait(800);
+		navigate(path);
+	};
+
 	
 	return (
 		<>
@@ -30,7 +41,7 @@ const Home = () => {
 					Explore my portfolio for a glimpse into my developing journey!
 				</div>
 
-				<CTABtn className="mt-[96px] min-[577px]:mx-auto min-[577px]:mt-7">
+				<CTABtn onClick={() => navigateTo("/about")} className="mt-[96px] min-[577px]:mx-auto min-[577px]:mt-7">
 					MORE ABOUT ME
 				</CTABtn>
 			</div>
@@ -64,7 +75,7 @@ const Home = () => {
 							journey!
 						</div>
 
-						<CTABtn className="mt-10">MORE ABOUT ME</CTABtn>
+						<CTABtn onClick={() => navigateTo("/about")} className="mt-10">MORE ABOUT ME</CTABtn>
 					</div>
 				</div>
 			</div>

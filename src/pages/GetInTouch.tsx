@@ -117,19 +117,22 @@ const GetInTouch = () => {
 
 					<div className="mt-8 flex gap-6 px-8">
 						<a
-							href="#"
+							href="https://www.instagram.com/rasikhkhalilp/"
+							target="_blank"
 							className="bg-[#2B2A2A] hover:bg-[#FFB400] transition-all rounded-full p-4"
 						>
 							<img src={ig} alt="" />
 						</a>
 						<a
-							href="#"
+							target="_blank"
+							href="https://www.linkedin.com/in/rasikh-khalil-pasha-10b159296/"
 							className="bg-[#2B2A2A] hover:bg-[#FFB400] transition-all rounded-full p-4"
 						>
 							<img src={lin} alt="" />
 						</a>
 						<a
-							href="#"
+							href="https://wa.me/6288279365062"
+							target="_blank"
 							className="bg-[#2B2A2A] hover:bg-[#FFB400] transition-all rounded-full p-4"
 						>
 							<img src={wa} alt="" />

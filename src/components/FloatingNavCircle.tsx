@@ -5,7 +5,7 @@ import contact from "../../public/icon/contact.svg";
 import { useNavigate } from "react-router-dom";
 import { useTransitionContext } from "../context/TransitionContextProvider";
 
-function wait(ms: number) {
+export function wait(ms: number) {
 	return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
