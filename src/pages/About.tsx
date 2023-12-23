@@ -16,6 +16,7 @@ import download from "../../public/icon/download.svg";
 import EducationHistory from "../components/EducationHistory";
 import FloatingNavCircle from "../components/FloatingNavCircle";
 import MobileNav from "../components/MobileNav";
+import cv from "../../public/CV RASIKH.pdf"
 
 const About = () => {
 	const skills = [html, js, css, tw, php, njs, react, ts, mongo, laravel, ex, next];
@@ -123,7 +124,7 @@ const About = () => {
 						</div>
 					</div>
 
-					<CTABtn onClick={() => window.open('/public/CV RASIKH.pdf', '_blank', 'fullscreen=yes')} className="mt-14 lg:mx-auto" icon={download}>
+					<CTABtn onClick={() => window.open(cv, '_blank', 'fullscreen=yes')} className="mt-14 lg:mx-auto" icon={download}>
 						DOWNLOAD CV
 					</CTABtn>
 
