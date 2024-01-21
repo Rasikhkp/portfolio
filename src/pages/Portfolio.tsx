@@ -1,7 +1,7 @@
 import x from "../../public/icon/x.svg";
 import FloatingNavCircle from "../components/FloatingNavCircle";
 import PortfolioImage from "../components/PortfolioImage";
-import porto1 from "../../public/img/1710.jpg";
+import fotoKalingga from "../../public/img/foto kalingga.png"
 import todolistss from "../../public/img/todlist sss.png"
 import Carousel from "../components/Carousel";
 import { useState } from "react";
@@ -26,28 +26,12 @@ const portfolios = [
 		image: todolistss,
 	},
 	{
-		slug: "mobile-google",
-		project: "Mobile App",
-		techstack: "React Native, TypeScript",
-		client: "Google",
-		preview: "www.google.com",
-		image: porto1,
-	},
-	{
-		slug: "web-amazon",
-		project: "E-commerce Website",
-		techstack: "React, Redux, Node.js",
-		client: "Amazon",
-		preview: "www.amazon.com",
-		image: porto1,
-	},
-	{
-		slug: "app-facebook",
-		project: "Social Media App",
-		techstack: "React, Firebase",
-		client: "Facebook",
-		preview: "www.facebook.com",
-		image: porto1,
+		slug: "web-kalingga",
+		project: "Website",
+		techstack: "Laravel, Javascript, Tailwind, AlpineJs",
+		client: "CV Kalingga Keling Jati",
+		preview: "http://kalinggakelingjati.site",
+		image: fotoKalingga,
 	},
 ];
 
@@ -98,9 +82,9 @@ const Portfolio = () => {
 					/>
 					<button
 						onClick={() => setOpenCarousel(false)}
-						className="fixed top-6 lg:top-5 right-1/2 translate-x-1/2 lg:translate-x-0 lg:right-5 z-40 hover:opacity-60 transition-all active:opacity-40"
+						className="fixed z-40 transition-all translate-x-1/2 top-6 lg:top-5 right-1/2 lg:translate-x-0 lg:right-5 hover:opacity-60 active:opacity-40"
 					>
-						<img src={x} className="lg:w-7 w-4" alt="" />
+						<img src={x} className="w-4 lg:w-7" alt="" />
 					</button>
 				</>
 			) : null}

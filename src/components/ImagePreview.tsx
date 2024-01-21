@@ -28,28 +28,31 @@ export default function ImagePreview({
 				<div className="text-2xl font-bold text-[#FFB400]">
 					IMAGE PROJECT
 				</div>
-
-				<div className="flex gap-1 justify-between mt-4 text-white text-start text-xs">
+				{/* http://kalinggakelingjati.site/components */}
+				<div className="flex justify-between gap-3 mt-4 text-xs text-white text-start">
 					<div>
 						<div>
-							<img src={document} className="inline mr-3 w-3" /> Project
+							<img src={document} className="inline w-3 mr-3" /> Project
 							: {project}
 						</div>
-						<div className="mt-2 flex gap-2">
+						<div className="flex gap-2 mt-2">
 							<div className="flex items-start gap-1 w-fit">
-								<img src={tag} className="inline mr-2 w-4" />
+								<img src={tag} className="inline w-4 mr-2" />
 								Techstack :
 							</div>
 							<div className="flex-1">{techstack}</div>
 						</div>
 					</div>
 					<div>
-						<div>
-							<img src={person} className="inline mr-3 w-4" /> Client :{" "}
-							{client}
+						<div className="flex gap-2 mt-2">
+								<div className="flex items-start gap-1 w-fit">
+									<img src={person} className="inline w-4 mr-2" />
+									Client :
+								</div>
+								<div className="flex-1">{client}</div>
 						</div>
 						<div className="mt-2">
-							<img src={eye} className="inline mr-3 w-4" />
+							<img src={eye} className="inline w-4 mr-3" />
 							<div className="inline ">Preview : </div>
 							<a
 								href={preview}
@@ -101,7 +104,7 @@ export default function ImagePreview({
 							Techstack : {techstack}
 						</div>
 					</div>
-					<div className="flex gap-2 mt-2 items-start">
+					<div className="flex items-start gap-2 mt-2">
 						<img
 							className="w-3 min-[677px]:w-4 transition-all"
 							src={eye}
