@@ -1,19 +1,16 @@
-// import menu from "../../public/icon/menu.svg";
 import mail from "../../public/icon/mail.svg";
 import phone from "../../public/icon/phone.svg";
 import ig from "../../public/icon/ig.svg";
 import wa from "../../public/icon/wa.svg";
+import github from "../../public/icon/github.svg";
 import telegram from "../../public/icon/telegram.svg";
-import lin from "../../public/icon/lin.svg";
 import CTABtn from "../components/CTABtn";
 import FloatingNavCircle from "../components/FloatingNavCircle";
 import MobileNav from "../components/MobileNav";
 import { useState } from "react";
 import axios from "axios";
-// import { Notyf } from "Notyf";
 import { Notyf } from "notyf";
 import "notyf/notyf.min.css";
-// import { React } from 'react'
 
 const notyf = new Notyf({
 	duration: 1000,
@@ -97,12 +94,12 @@ const GetInTouch = () => {
 							be part of your visions.
 						</div>
 					</div>
-					<div className="mt-8 px-8 font-osans">
+					<div className="px-8 mt-8 font-osans">
 						<div className="flex gap-4">
 							<img src={mail} alt="" />
 							<div>
 								<div className="text-sm text-[#BBBBBB]">MAIL ME</div>
-								<div className="text-sm mt-1">rasikhonly@gmail.com</div>
+								<div className="mt-1 text-sm">rasikhonly@gmail.com</div>
 							</div>
 						</div>
 
@@ -110,12 +107,12 @@ const GetInTouch = () => {
 							<img src={phone} alt="" />
 							<div>
 								<div className="text-sm text-[#BBBBBB]">CALL ME</div>
-								<div className="text-sm mt-1">+62 882 7936 5062</div>
+								<div className="mt-1 text-sm">+62 882 7936 5062</div>
 							</div>
 						</div>
 					</div>
 
-					<div className="mt-8 flex gap-6 px-8">
+					<div className="flex gap-6 px-8 mt-8">
 						<a
 							href="https://www.instagram.com/rasikhkhalilp/"
 							target="_blank"
@@ -125,10 +122,10 @@ const GetInTouch = () => {
 						</a>
 						<a
 							target="_blank"
-							href="https://www.linkedin.com/in/rasikh-khalil-pasha-10b159296/"
+							href="https://github.com/rasikhkp"
 							className="bg-[#2B2A2A] hover:bg-[#FFB400] transition-all rounded-full p-4"
 						>
-							<img src={lin} alt="" />
+							<img src={github} alt="" />
 						</a>
 						<a
 							href="https://wa.me/6288279365062"
@@ -141,9 +138,9 @@ const GetInTouch = () => {
 				</div>
 				<form
 					onSubmit={handleSubmit}
-					className="mt-8 px-8 lg:px-0 font-osans"
+					className="px-8 mt-8 lg:px-0 font-osans"
 				>
-					<div className="lg:flex gap-4">
+					<div className="gap-4 lg:flex">
 						<input
 							value={name}
 							onChange={(e) => setName(e.target.value)}
