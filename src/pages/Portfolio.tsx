@@ -5,6 +5,8 @@ import fotoKalingga from "../../public/img/foto kalingga.png";
 import todolistss from "../../public/img/todlist sss.png";
 import pp1 from "../../public/img/pp1.png";
 import pp2 from "../../public/img/pp2.png";
+import kaizen from "../../public/img/kaizen.png";
+import cashzzle from "../../public/img/cashzzle.png";
 import Carousel from "../components/Carousel";
 import { useState } from "react";
 import MobileNav from "../components/MobileNav";
@@ -19,6 +21,24 @@ export type PortfolioProps = {
 };
 
 const portfolios = [
+    {
+        slug: "kaizen",
+        project: "Website",
+        techstack:
+            "Nextjs, Typescript, MongoDB, Tailwind, Redux Toolkit, Prisma",
+        client: "Me",
+        preview: "https://nkey.vercel.app",
+        image: kaizen,
+    },
+    {
+        slug: "cashzzle",
+        project: "Website",
+        techstack:
+            "Nextjs, Typescript, MongoDB, Tailwind, Redux Toolkit, Prisma",
+        client: "Me",
+        preview: "https://cashzzle.vercel.app",
+        image: cashzzle,
+    },
     {
         slug: "simple-todolist",
         project: "Website",

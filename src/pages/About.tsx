@@ -44,7 +44,7 @@ const About = () => {
 
                 <MobileNav />
 
-                <div className="max-w-screen-xl mx-auto px-8">
+                <div className="max-w-screen-xl px-8 mx-auto">
                     <div className="hidden min-[577px]:block text-[120px] relative font-extrabold text-[#222222] text-center">
                         RESUME
                         <div className="text-[56px] lg:text-[56px] absolute w-80 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 font-bold text-white">
@@ -60,7 +60,7 @@ const About = () => {
 
                     <div className="w-[244px] min-[577px]:hidden transition-all overflow-hidden h-[244px] rounded-ful border-4 border-[#252525] rounded-full mx-auto mt-10">
                         <img
-                            className="scale-[2] translate-x-4 -translate-y-32"
+                            className="scale-[2] translate-x-4 -translate-y-10 -rotate-90"
                             src={fotoku}
                             alt=""
                         />
@@ -156,8 +156,8 @@ const About = () => {
                             <img
                                 className={`${
                                     skill == mongo
-                                        ? "min-[577px]:w-[40px]"
-                                        : "min-[577px]:w-[62px]"
+                                        ? "min-[577px]:w-[40px] w-12"
+                                        : "min-[577px]:w-[62px] w-12"
                                 }`}
                                 key={skill}
                                 src={skill}
@@ -172,10 +172,10 @@ const About = () => {
                         EDUCATION
                     </div>
 
-                    <div className="w-fit mx-auto pb-5">
+                    <div className="pb-5 mx-auto w-fit">
                         <EducationHistory
                             lineH="min-[577px]:h-8 h-14"
-                            className="mt-14 font-bold"
+                            className="font-bold mt-14"
                             duration="2021 - PRESENT"
                         >
                             <span className="text-sm">
@@ -189,7 +189,7 @@ const About = () => {
 
                         <EducationHistory
                             lineH="h-8"
-                            className="mt-9 font-bold"
+                            className="font-bold mt-9"
                             duration="2018 - 2021"
                         >
                             <div className="text-xs text-[#BBBBBB] mt-2">
@@ -199,7 +199,7 @@ const About = () => {
 
                         <EducationHistory
                             lineH="h-8"
-                            className="mt-9 font-bold"
+                            className="font-bold mt-9"
                             duration="2015 - 2018"
                         >
                             <div className="text-xs text-[#BBBBBB] mt-2">
@@ -209,7 +209,7 @@ const About = () => {
 
                         <EducationHistory
                             lineH="h-8"
-                            className="mt-9 font-bold"
+                            className="font-bold mt-9"
                             duration="2009 - 2015"
                         >
                             <div className="text-xs text-[#BBBBBB] mt-2">
