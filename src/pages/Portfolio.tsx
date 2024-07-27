@@ -2,7 +2,7 @@ import x from "../../public/icon/x.svg";
 import FloatingNavCircle from "../components/FloatingNavCircle";
 import PortfolioImage from "../components/PortfolioImage";
 import fotoKalingga from "../../public/img/foto kalingga.png";
-import todolistss from "../../public/img/todlist sss.png";
+import todolistss from "../../public/img/justtodolist.png";
 import pp1 from "../../public/img/pp1.png";
 import pp2 from "../../public/img/pp2.png";
 import kaizen from "../../public/img/kaizen.png";
