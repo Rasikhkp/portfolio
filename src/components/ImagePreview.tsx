@@ -10,6 +10,7 @@ type ImagePreviewProps = {
     client: string;
     preview: string;
     image: string;
+    name: string;
 };
 
 export default function ImagePreview({
@@ -19,15 +20,14 @@ export default function ImagePreview({
     client,
     preview,
     image,
+    name,
 }: ImagePreviewProps) {
     return (
         <>
             <div
                 className={`${className} hidden lg:block m-auto px-5 py-8 overflow-hidden rounded-2xl font-poppins text-center w-[500px] h-fit bg-[#252525]`}
             >
-                <div className="text-2xl font-bold text-[#FFB400]">
-                    IMAGE PROJECT
-                </div>
+                <div className="text-2xl font-bold text-[#FFB400]">{name}</div>
                 {/* http://kalinggakelingjati.site/components */}
                 <div className="flex justify-between gap-3 mt-4 text-xs text-white text-start">
                     <div>
@@ -54,13 +54,17 @@ export default function ImagePreview({
                         <div className="mt-2">
                             <img src={eye} className="inline w-4 mr-3" />
                             <div className="inline ">Preview : </div>
-                            <a
-                                href={preview}
-                                target="_blank"
-                                className="underline mt-1 block hover:no-underline text-[#FFB400]"
-                            >
-                                {preview}
-                            </a>
+                            {preview ? (
+                                <a
+                                    href={preview}
+                                    target="_blank"
+                                    className="underline mt-1 block hover:no-underline text-[#FFB400]"
+                                >
+                                    {preview}
+                                </a>
+                            ) : (
+                                "Not Yet"
+                            )}
                         </div>
                     </div>
                 </div>
@@ -70,7 +74,7 @@ export default function ImagePreview({
 
             <div className={`${className} lg:hidden w-screen`}>
                 <div className="text-2xl min-[577px]:text-[32px] transition-all text-[#FFB400] font-bold text-center mt-5">
-                    IMAGE PROJECT
+                    {name}
                 </div>
 
                 <div className="px-8 mt-[42px] min-[577px]:grid min-[577px]:grid-cols-2 gap-2">
@@ -112,13 +116,17 @@ export default function ImagePreview({
                         />
                         <div className="text-xs min-[677px]:text-base transition-all">
                             Preview :{" "}
-                            <a
-                                href={preview}
-                                target="_blank"
-                                className="text-[#856314] underline hover:no-underline"
-                            >
-                                {preview}
-                            </a>
+                            {preview ? (
+                                <a
+                                    href={preview}
+                                    target="_blank"
+                                    className="underline mt-1 block hover:no-underline text-[#FFB400]"
+                                >
+                                    {preview}
+                                </a>
+                            ) : (
+                                "Not Yet"
+                            )}
                         </div>
                     </div>
                 </div>

@@ -9,11 +9,13 @@ type PositionObj = {
 type PortfolioImageProps = ButtonHTMLAttributes<HTMLButtonElement> & {
     className?: string;
     image: string;
+    name: string;
 };
 
 export default function PortfolioImage({
     className,
     image,
+    name,
     ...buttonProps
 }: PortfolioImageProps) {
     const transitionRef = useRef(null);
@@ -81,7 +83,7 @@ export default function PortfolioImage({
                 ref={transitionRef}
                 className="absolute w-full h-full font-medium opacity-0 flex justify-center items-center text-white bg-[#FFB400]"
             >
-                Image Project
+                {name}
             </div>
             <img
                 src={image}

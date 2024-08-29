@@ -4,7 +4,9 @@ import PortfolioImage from "../components/PortfolioImage";
 import fotoKalingga from "../../public/img/foto kalingga.png";
 import todolistss from "../../public/img/justtodolist.png";
 import pp1 from "../../public/img/pp1.png";
+import carepulse from "../../public/img/carepulse.png";
 import pp2 from "../../public/img/pp2.png";
+import cbt from "../../public/img/cbt.png";
 import kaizen from "../../public/img/kaizen.png";
 import cashzzle from "../../public/img/cashzzle.png";
 import Carousel from "../components/Carousel";
@@ -18,10 +20,30 @@ export type PortfolioProps = {
     client: string;
     preview: string;
     image: string;
+    name: string;
 };
 
 const portfolios = [
     {
+        name: "CarePulse",
+        slug: "carepulse",
+        project: "Website",
+        techstack: "Next JS, Tailwind CSS, AppWrite",
+        client: "Me",
+        preview: "",
+        image: carepulse,
+    },
+    {
+        name: "CBT Website",
+        slug: "cbt-website",
+        project: "Website",
+        techstack: "CodeIgniter, Bootstrap, Jquery",
+        client: "PT. Bintan Resort Cakrawala",
+        preview: "",
+        image: cbt,
+    },
+    {
+        name: "Kaizen",
         slug: "kaizen",
         project: "Website",
         techstack:
@@ -31,6 +53,7 @@ const portfolios = [
         image: kaizen,
     },
     {
+        name: "Cashzzle",
         slug: "cashzzle",
         project: "Website",
         techstack:
@@ -40,6 +63,7 @@ const portfolios = [
         image: cashzzle,
     },
     {
+        name: "TodoList",
         slug: "simple-todolist",
         project: "Website",
         techstack:
@@ -49,6 +73,7 @@ const portfolios = [
         image: todolistss,
     },
     {
+        name: "ERP Website",
         slug: "web-kalingga",
         project: "Website",
         techstack: "Laravel, Javascript, Tailwind, AlpineJs",
@@ -57,6 +82,7 @@ const portfolios = [
         image: fotoKalingga,
     },
     {
+        name: "Portfolio Practice 1",
         slug: "practice-portfolio-1",
         project: "Website",
         techstack: "ReactJs, Typescript, Tailwind, Framer Motion",
@@ -65,6 +91,7 @@ const portfolios = [
         image: pp1,
     },
     {
+        name: "Portfolio Practice 2",
         slug: "practice-portfolio-2",
         project: "Website",
         techstack: "ReactJs, Typescript, Tailwind, GSAP",
@@ -108,6 +135,7 @@ const Portfolio = () => {
                         }}
                         key={index}
                         image={portfolio.image}
+                        name={portfolio.name}
                         className={`${
                             index > 0 ? "mt-8" : ""
                         } min-[577px]:mt-0`}
